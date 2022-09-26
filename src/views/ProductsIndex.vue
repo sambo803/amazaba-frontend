@@ -24,9 +24,12 @@
 <template>
   <div class="index">
     <h1>{{ message }}</h1>
-
-    <h2>{{products}}</h2>
+    <div v-for="product in products" v-bind:key="product.id">
+    <h2>{{product.name}}</h2>
+    <img v-bind:src="product.image_url" v-bind:alt="product.name" />
   </div>
+</div>
 </template>
 
 <style></style>
+
