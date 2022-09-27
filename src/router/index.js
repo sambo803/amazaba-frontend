@@ -2,7 +2,7 @@ import axios from "axios";
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsIndex from '../views/ProductsIndex.vue'
-
+import ProductNew from '../views/ProductNew.vue'
 
 const routes = [
   {
@@ -22,7 +22,12 @@ const routes = [
     path: '/products',
     name: 'products-index',
     component: ProductsIndex
-  }
+  },
+  {
+    path: "/products/new",
+    name: 'product-new',
+    component: ProductNew
+  },
 ]
 
 const router = createRouter({
