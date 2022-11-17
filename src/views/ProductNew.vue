@@ -26,7 +26,7 @@
 
 <template>
   <div class="products-new">
-    <h1>{{ newProduct }}</h1>
+    <h1>New Product</h1>
     <form v-on:submit.prevent="createProduct()">
     <ul>
     <li v-for="error in errors" v-bind:key="error">{{ error }}</li></ul>
@@ -38,6 +38,7 @@
     <input type="text" v-model="newProduct.price" />
     Image_url
     <input type="text" v-model="newProduct.image_url" />
+    <p></p>
     <input type="submit" value="Create" />
   </form>
   </div>

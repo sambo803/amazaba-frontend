@@ -1,8 +1,9 @@
 import axios from "axios";
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProductsIndex from '../views/ProductsIndex.vue'
-import ProductNew from '../views/ProductNew.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from '../views/HomeView.vue';
+import ProductsIndex from '../views/ProductsIndex.vue';
+import ProductNew from '../views/ProductNew.vue';
+import ProductsShow from '../views/ProductsShow.vue';
 
 const routes = [
   {
@@ -28,11 +29,16 @@ const routes = [
     name: 'product-new',
     component: ProductNew
   },
+  {
+    path: "/products/:id",
+    name: 'product-show',
+    component: ProductsShow
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
